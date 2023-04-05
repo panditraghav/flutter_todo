@@ -32,6 +32,7 @@ class TodoListItem extends StatelessWidget {
       padding: const EdgeInsets.only(top: 10, right: 10, left: 10),
       child: Slidable(
         endActionPane: ActionPane(
+          motion: const BehindMotion(),
           children: [
             SlidableAction(
               onPressed: onDelete,
@@ -40,7 +41,6 @@ class TodoListItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(5),
             ),
           ],
-          motion: BehindMotion(),
         ),
         child: Container(
           padding: const EdgeInsets.all(15),
